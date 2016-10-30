@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!--<servlet>-->
+    <!--<servlet-name>main.WordFinderServlet</servlet-name>-->
+    <!--<servlet-class>main.WordFinderServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>main.WordFinderServlet</servlet-name>-->
+    <!--<url-pattern>/main.WordFinderServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<session-config>-->
+    <!--<session-timeout>-->
+    <!--30-->
+    <!--</session-timeout>-->
+    <!--</session-config>-->
+</web-app>
