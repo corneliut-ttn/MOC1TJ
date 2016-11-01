@@ -9,12 +9,19 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>This is the index page.</title>
+    <title>Index page.</title>
 </head>
+
 <body>
-<h1>Hello to Word Finder! The new incredible tool for finding words! YEY!</h1>
-<h2>Current date and time: <%= new java.util.Date() %>
-</h2>
-<a href="/wordfinderservlet">Word Finder Servlet - Click here to send GET request</a>
+<h2>Hello to Word Finder! The new incredible tool for finding words! YEY!</h2>
+<h3>Current date and time: <%= new java.util.Date() %>
+</h3>
+<ul>
+    <li><a href="index.jsp">Home</a></li>
+    <li><a href="/authenticationservlet">Login/Register</a></li>
+    <li><a href="/wordfinderservlet">WordFinder</a></li>
+    <%--<li><a href="/wordfinderservlet">Word Finder</a></li>--%>
+</ul>
+<%--<a href="/wordfinderservlet">Word Finder - Click here to send GET request</a>--%>
 </body>
 </html>

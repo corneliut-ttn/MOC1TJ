@@ -1,0 +1,7 @@
+maria,m
+ionut,i
+cristina,c
+ghita,g
+ion,i
+
+corneliu,c

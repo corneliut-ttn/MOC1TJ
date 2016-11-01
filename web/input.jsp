@@ -1,4 +1,4 @@
-<%--
+<%@ page import="main.beans.WordFinderUserBean" %><%--
   Created by IntelliJ IDEA.
   User: Cornelius
   Date: 29.10.2016
@@ -9,12 +9,16 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>This is the input page.</title>
+    <title>Input page.</title>
 </head>
 <body>
-<h1>Hello!</h1>
-<h1>Servlet main.WordFinderServlet at <%=request.getContextPath()%>
-</h1>
+<% if (request.getSession().getAttribute("userBean") != null &&
+        ((WordFinderUserBean) request.getSession().getAttribute("userBean")).isLoggedIn()) {%>
+<header style="height: 8%;">
+    <jsp:include page="info/header.jsp">
+        <jsp:param name="showMenu" value="block"/>
+    </jsp:include>
+</header>
 
 <form action="/wordfinderservlet" method="POST">
     Input string:<br>
@@ -28,7 +32,13 @@
 
     <input type="submit">
 </form>
+<footer style="height: 7%;">
+    <jsp:include page="info/footer.jsp"/>
+</footer>
+<% } else {
+    out.println("<h1 align=\"center\">Access restricted</h1>");
+    out.println("<a href=\"/authentication.jsp\">Back to Login/Register</a>");
+}%>
 
-<p>Input string<%=request.getParameter("s")%><p>
 </body>
 </html>

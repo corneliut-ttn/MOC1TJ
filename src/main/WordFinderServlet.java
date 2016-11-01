@@ -1,5 +1,7 @@
 package main;
 
+import main.model.WordFinder;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -70,18 +72,18 @@ public class WordFinderServlet extends HttpServlet {
         int nMinLength;
         nMinLength = Integer.parseInt(sMinLength);
 
-        WordFinderBean wordFinderBean;
+        WordFinder wordFinderBean;
 
         if (sDictionary.equals("ENG")) {
-            wordFinderBean = new WordFinderBean(fileNames[0]);
+            wordFinderBean = new WordFinder(fileNames[0]);
         } else if (sDictionary.equals("FRA")) {
-            wordFinderBean = new WordFinderBean(fileNames[1]);
+            wordFinderBean = new WordFinder(fileNames[1]);
         } else {
-            wordFinderBean = new WordFinderBean(fileNames[2]);
+            wordFinderBean = new WordFinder(fileNames[2]);
         }
         wordFinderBean.findWords(sInput, nMinLength);
 
-        request.setAttribute("wordFinderBean", wordFinderBean);
+        request.setAttribute("wordFinderResultBean", wordFinderBean.getWordFinderResultBean());
         request.setAttribute("requestTimeMillis", System.currentTimeMillis() - startTime);
 
         request.getRequestDispatcher("/result.jsp").forward(request, response);

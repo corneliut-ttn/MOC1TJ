@@ -9,9 +9,17 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>This is the error page.</title>
+    <title>Error page.</title>
 </head>
 <body>
-
+<h2 align="left">
+    <br><br>
+    <p style="color:red"> Error!</p>
+    <br>
+    <strong style="color:darkred">${requestScope.get("error")}</strong>
+</h2>
+<p align="center">
+    <a href="/authenticationservlet">Back</a>
+</p>
 </body>
 </html>
