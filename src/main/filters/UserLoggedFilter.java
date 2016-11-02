@@ -15,11 +15,11 @@ import java.io.IOException;
 @WebFilter(filterName = "UserLoggedFilter", urlPatterns = {"/input.jsp", "/result.jsp"})
 public class UserLoggedFilter implements Filter {
 
-    private FilterConfig fc;
+    private FilterConfig mFilterConfig;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        this.fc = filterConfig;
+        this.mFilterConfig = filterConfig;
     }
 
     @Override
