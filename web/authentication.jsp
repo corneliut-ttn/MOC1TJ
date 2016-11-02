@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
-    <title>Login Page</title>
+    <title>Authentication Page</title>
 </head>
 
 <body>
@@ -17,14 +17,14 @@
         <span style="float: left;">
             <jsp:include page="info/form.jsp">
                 <jsp:param name="action" value="login"/>
-                <jsp:param name="remember" value="block"/>
+                <jsp:param name="rememberMe" value="block"/>
             </jsp:include>
         </span>
 
     <span style="float: right;">
             <jsp:include page="info/form.jsp">
                 <jsp:param name="action" value="register"/>
-                <jsp:param name="remember" value="none"/>
+                <jsp:param name="rememberMe" value="none"/>
             </jsp:include>
         </span>
 </main>

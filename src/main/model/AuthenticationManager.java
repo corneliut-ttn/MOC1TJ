@@ -1,6 +1,6 @@
 package main.model;
 
-import main.WordFinderServlet;
+import main.servlets.WordFinderServlet;
 
 import java.io.*;
 import java.util.HashMap;

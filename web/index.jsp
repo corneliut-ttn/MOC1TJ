@@ -20,7 +20,8 @@
     <li><a href="index.jsp">Home</a></li>
     <li><a href="/authenticationservlet">Login/Register</a></li>
     <li><a href="/wordfinderservlet">WordFinder</a></li>
-    <%--<li><a href="/wordfinderservlet">Word Finder</a></li>--%>
+    <li><a href="/input.jsp">[Test]Input</a></li>
+    <li><a href="/result.jsp">[Test]Result</a></li>
 </ul>
 <%--<a href="/wordfinderservlet">Word Finder - Click here to send GET request</a>--%>
 </body>

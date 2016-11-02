@@ -1,7 +1,7 @@
 package main.model;
 
-import main.WordFinderServlet;
 import main.beans.WordFinderResultBean;
+import main.servlets.WordFinderServlet;
 
 import java.io.*;
 import java.util.HashMap;
