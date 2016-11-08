@@ -38,6 +38,7 @@
 <% } else {
     out.println("<h1 align=\"center\">Access restricted</h1>");
     out.println("<a href=\"/authentication.jsp\">Back to Login/Register</a>");
+    out.println("<a href=\"/index.jsp\">Back to Home</a>");
 }%>
 
 </body>

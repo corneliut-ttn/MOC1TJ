@@ -28,7 +28,7 @@ public class DecoratorFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
 
-        CharResponseWrapper wrapper = new CharResponseWrapper((HttpServletResponse) servletResponse);
+        CharResponseWrapper wrapper = new CharResponseWrapper(httpServletResponse);
         //Send the decorated object as a replacement for the original response
         filterChain.doFilter(servletRequest, wrapper);
         //Get the dynamically generated content from the decorator
@@ -36,7 +36,8 @@ public class DecoratorFilter implements Filter {
         // Modify the content
         StringWriter sw = new StringWriter();
         sw.write(content);
-        sw.write("<h1>Thank you for using our WordFinder service!</h1>");
+        sw.write("<p>Thank you for using our WordFinder service!</p>");
+        sw.write("<p>Kindly provided by Cornelius!</p>");
         //Send the modified content using the original response
         PrintWriter out = servletResponse.getWriter();
         out.write(sw.toString());

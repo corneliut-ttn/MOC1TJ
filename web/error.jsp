@@ -20,6 +20,7 @@
 </h2>
 <p align="center">
     <a href="/authenticationservlet">Back</a>
+    <a href="/index.jsp">Home</a>
 </p>
 </body>
 </html>

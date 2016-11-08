@@ -19,7 +19,6 @@ public class CharResponseWrapper extends HttpServletResponseWrapper {
 
     @Override
     public PrintWriter getWriter() {
-        // Hide the original writer
         return new PrintWriter(output);
     }
 
